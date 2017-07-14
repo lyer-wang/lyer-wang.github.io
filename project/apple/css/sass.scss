@@ -1,0 +1,31 @@
+@mixin cube ($s){
+  width: $s;
+  height: $s;
+}
+@mixin rect($w,$h){
+  width: $w;
+  height: $h;
+}
+@mixin circle($s){
+  width: $s;
+  height: $s;
+  border-radius: 50%;
+}
+@function bg(){
+     $r:floor(random()*256);
+     $g:floor(random()*256);
+     $b:floor(random()*256);
+  $color:rgb($r,$g,$b);
+  @return $color;
+}
+
+
+@mixin center(){
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
